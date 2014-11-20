@@ -113,23 +113,23 @@ public class TwentyOneSticks
 						{
 							window.println("Would you like to play again (Y/n)?");
 							String playAgain = window.nextLine();
-							if(playAgain.equals("Y")||playAgain.equals("y"))
+							while(true)
 							{
-								playing = true;
-								numSticks=21;
-							}else{
-								window.println("Invalid input. Please try again.");
-								playAgain=window.nextLine();
-								continue;
+								if(playAgain.equals("Y")||playAgain.equals("y"))
+								{
+									playing = true;
+									numSticks=21;
+									break;
+								} if(playAgain.equalsIgnoreCase("N")||playAgain.equals("n"))
+								{
+									window.println("Thanks for playing...Cry baby!");
+									break;
+								}else{
+									window.println("Invalid input. Please try again.");
+									playAgain=window.nextLine();
+								}
 							}
-							if(playAgain.equalsIgnoreCase("N")||playAgain.equals("n"))
-							{
-								window.println("Thanks for playing...Cry baby!");
-							}else{
-								window.println("Invalid input. Please try again.");
-								playAgain=window.nextLine();
-								continue;
-							}
+
 						}    
 					} compPlayers = false;
 
@@ -241,22 +241,21 @@ public class TwentyOneSticks
 						{
 							window.println("Would you like to play again (Y/n)?");
 							String playAgain = window.nextLine();
-							if(playAgain.equals("Y")||playAgain.equals("y"))
+							while(true)
 							{
-								playing = true;
-								numSticks=21;
-							}else{
-								window.println("Invalid input. Please try again.");
-								playAgain=window.nextLine();
-								continue;
-							}
-							if(playAgain.equalsIgnoreCase("N")||playAgain.equals("n"))
-							{
-								window.println("Thanks for playing...Cry baby!");
-							}else{
-								window.println("Invalid input. Please try again.");
-								playAgain=window.nextLine();
-								continue;
+								if(playAgain.equals("Y")||playAgain.equals("y"))
+								{
+									playing = true;
+									numSticks=21;
+									break;
+								} if(playAgain.equalsIgnoreCase("N")||playAgain.equals("n"))
+								{
+									window.println("Thanks for playing...Cry baby!");
+									break;
+								}else{
+									window.println("Invalid input. Please try again.");
+									playAgain=window.nextLine();
+								}
 							}
 						}	
 					}compPlayers=false;
@@ -364,22 +363,21 @@ public class TwentyOneSticks
 						{
 							window.println("Would you like to play again (Y/n)?");
 							String playAgain = window.nextLine();
-							if(playAgain.equals("Y")||playAgain.equals("y"))
+							while(true)
 							{
-								playing = true;
-								numSticks=21;
-							}else{
-								window.println("Invalid input. Please try again.");
-								playAgain=window.nextLine();
-								continue;
+								if(playAgain.equals("Y")||playAgain.equals("y"))
+								{
+									playing = true;
+									numSticks=21;
+									break;
+								} if(playAgain.equalsIgnoreCase("N")||playAgain.equals("n"))
+								{
+									window.println("Thanks for playing...Cry baby!");
+									break;
+								}else{
+									window.println("Invalid input. Please try again.");
+									playAgain=window.nextLine();
 								}
-							if(playAgain.equalsIgnoreCase("N")||playAgain.equals("n"))
-							{
-								window.println("Thanks for playing...Cry baby!");
-							}else{
-								window.println("Invalid input. Please try again.");
-								playAgain=window.nextLine();
-								continue;
 							}
 						}	
 					}compPlayers=false;
