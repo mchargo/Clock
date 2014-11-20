@@ -10,11 +10,11 @@ import java.util.concurrent.CountDownLatch;
 import javax.swing.*;
 import javax.swing.text.DefaultCaret;
 
-public class Window extends JFrame implements WindowListener
+public class Window implements WindowListener
 {
 	public Window(){this(30, 50);}
-	public Window(int rows, int columns){this(rows, columns, true);}
-	public Window(int rows, int columns, boolean exitOnClose)
+	public Window(int rows, int columns){this("Java24Hours", rows, columns, true);}
+	public Window(String title, int rows, int columns, boolean exitOnClose)
 	{
 		this.exitOnClose = exitOnClose;
 		latch = new CountDownLatch(1);
@@ -49,12 +49,14 @@ public class Window extends JFrame implements WindowListener
 		centerLayout.add(pane);
 		panel.add(centerLayout, BorderLayout.CENTER);
 		
-		this.addWindowListener(this);
+		frame = new JFrame("");
 		
-		this.getContentPane().add(panel);
-		this.pack();
-		this.setLocationRelativeTo(null);
-		this.setVisible(true);
+		frame.addWindowListener(this);
+		
+		frame.getContentPane().add(panel);
+		frame.pack();
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
 
 		field.requestFocus();
 	}
@@ -99,7 +101,6 @@ public class Window extends JFrame implements WindowListener
 		
 		SwingUtilities.invokeLater(run);
 	}
-
 
 	public String nextLine()
 	{
@@ -153,6 +154,7 @@ public class Window extends JFrame implements WindowListener
 	}
 	
 	private boolean exitOnClose;
+	private JFrame frame;
 	private JPanel panel;
 	private JTextArea area;
 	private JScrollPane pane;
