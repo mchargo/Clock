@@ -9,30 +9,7 @@ public class TwentyOneSticks
 		
 		// change this however you want
 		// my fix
-		int numPlayers = 0;
-		boolean problem = true;
-		
-		// while there is still a problem, lets keep asking
-		// for a number.
-		while(problem)
-		{
-			try
-			{
-				// get the number from the window input
-				numPlayers= window.nextInt();
-				
-				// if we get to this point, then everything is ok!
-				problem = false;
-			}catch(Exception e)
-			{
-				// there was not a valid number inputted!
-				numPlayers = -1;
-				problem = true; // there was a problem.
-				System.out.println("That was not a number.");
-			}
-		}
-		// end fix
-		
+		int numPlayers = window.nextInt();
 		int numSticks = 21;
 		int numToTake;
 		int min = 1;

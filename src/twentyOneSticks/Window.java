@@ -33,26 +33,26 @@ public class Window implements WindowListener
 				latch.countDown();
 			}
 		});
-		
+
 		area = new JTextArea(rows, columns);
 		area.setWrapStyleWord(true);
 		area.setLineWrap(true);
 		area.setEditable(false);
 		pane = new JScrollPane(area);
 		pane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-		
+
 		JPanel southLayout = new JPanel();
 		southLayout.add(field);
 		panel.add(southLayout, BorderLayout.SOUTH);
-		
+
 		JPanel centerLayout = new JPanel();
 		centerLayout.add(pane);
 		panel.add(centerLayout, BorderLayout.CENTER);
-		
+
 		frame = new JFrame("");
-		
+
 		frame.addWindowListener(this);
-		
+
 		frame.getContentPane().add(panel);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
@@ -60,14 +60,14 @@ public class Window implements WindowListener
 
 		field.requestFocus();
 	}
-	
+
 	@Override public void windowActivated(WindowEvent e) {}
 	@Override public void windowClosed(WindowEvent e){}
 	@Override public void windowDeactivated(WindowEvent e){}
 	@Override public void windowDeiconified(WindowEvent e) {}
 	@Override public void windowIconified(WindowEvent e){}
 	@Override public void windowOpened(WindowEvent e){}
-	
+
 	@Override
 	public void windowClosing(WindowEvent e) 
 	{
@@ -84,7 +84,7 @@ public class Window implements WindowListener
 				area.repaint();
 			}
 		};
-		
+
 		SwingUtilities.invokeLater(run);
 	}
 
@@ -98,7 +98,7 @@ public class Window implements WindowListener
 				area.repaint();
 			}
 		};
-		
+
 		SwingUtilities.invokeLater(run);
 	}
 
@@ -114,45 +114,75 @@ public class Window implements WindowListener
 			System.out.println("Error occurred: " + e.toString());
 			e.printStackTrace();
 		}
-		
+
 		return null;
 	}
-	
+
 	public int nextInt()
 	{
-		return Integer.valueOf(nextLine());
+		while(true)
+		{
+			try
+			{
+				return Integer.valueOf(nextLine());
+			}catch(Exception e){}
+		}
 	}
-	
+
 	public long nextLong()
 	{
-		return Long.valueOf(nextLine());
+		while(true)
+		{
+			try
+			{
+				return Long.valueOf(nextLine());
+			}catch(Exception e){}
+		}
 	}
-	
+
 	public float nextFloat()
 	{
-		return Float.valueOf(nextLine());
+		while(true)
+		{
+			try
+			{
+				return Float.valueOf(nextLine());
+			}catch(Exception e){}
+		}
 	}
-	
+
 	public double nextDouble()
 	{
-		return Double.valueOf(nextLine());
+		while(true)
+		{
+			try
+			{
+				return Double.valueOf(nextLine());
+			}catch(Exception e){}
+		}
 	}
-	
+
 	public short nextShort()
 	{
-		return Short.valueOf(nextLine());
+		while(true)
+		{
+			try
+			{
+				return Short.valueOf(nextLine());
+			}catch(Exception e){}
+		}
 	}
-	
+
 	public boolean prompt()
 	{
 		return nextLine().toLowerCase().startsWith("y");
 	}
-	
+
 	public void resetLatch()
 	{
 		latch = new CountDownLatch(1);
 	}
-	
+
 	private boolean exitOnClose;
 	private JFrame frame;
 	private JPanel panel;
