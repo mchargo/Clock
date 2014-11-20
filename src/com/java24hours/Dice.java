@@ -8,7 +8,7 @@ public class Dice {
 		for (int idx =1; idx<=1; idx++)
 		{
 		Random generator = new Random();
-		int value = generator.nextInt(11)-10;
+		int value = generator.nextInt(11);
 		System.out.println(value);
 		}
 	}
