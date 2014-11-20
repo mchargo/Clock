@@ -50,8 +50,7 @@ public class TwentyOneSticks
                 {
                     window.println("Cheater! You input an invalid number of sticks! Try Again!");
                 }
-            }else{
-                if(goFirst.equalsIgnoreCase("N")|| goFirst.equals("n"))
+            }else if(goFirst.equalsIgnoreCase("N")|| goFirst.equals("n"))
                 {
                     if(numSticks==21)
                     {
@@ -89,7 +88,11 @@ public class TwentyOneSticks
                             numToTake=window.nextInt();
                         }
                     }
-                }
+                }else{
+                	window.println("Invalid input. Please try again.");
+                	window.println("Would you like to go first? Y/n");
+                	goFirst = window.nextLine();
+                	continue;
             }
             if(!playing)
             {
