@@ -6,7 +6,7 @@ public class Credits {
 	{
 		String title = "Sharknado";
 		int year = 2013;
-		String director = "Anthony Ferrante";
+		String director = "Anthony \"boring\" Ferrante";
 		String role1 = "Fin";
 		String actor1 = "Ian Ziering";
 		String role2 = "April";
