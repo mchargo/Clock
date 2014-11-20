@@ -3,12 +3,12 @@ public class TwentyOneSticks
 {
 	public static void main(String[] args) 
 	{
+		// this was part of a test commit
+		
 		Window window = new Window();
 
 		window.println("How many computer players? (max 3)");
 		
-		// change this however you want
-		// my fix
 		int numPlayers = window.nextInt();
 		int numSticks = 21;
 		int numToTake;
