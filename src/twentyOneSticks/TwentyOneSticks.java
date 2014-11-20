@@ -117,10 +117,16 @@ public class TwentyOneSticks
 							{
 								playing = true;
 								numSticks=21;
+							}else{
+								window.println("Invalid input. Please try again.");
+								playAgain=window.nextLine();
 							}
 							if(playAgain.equalsIgnoreCase("N")||playAgain.equals("n"))
 							{
 								window.println("Thanks for playing...Cry baby!");
+							}else{
+								window.println("Invalid input. Please try again.");
+								playAgain=window.nextLine();
 							}
 						}    
 					} compPlayers = false;
@@ -237,10 +243,16 @@ public class TwentyOneSticks
 							{
 								playing = true;
 								numSticks=21;
+							}else{
+								window.println("Invalid input. Please try again.");
+								playAgain=window.nextLine();
 							}
 							if(playAgain.equalsIgnoreCase("N")||playAgain.equals("n"))
 							{
 								window.println("Thanks for playing...Cry baby!");
+							}else{
+								window.println("Invalid input. Please try again.");
+								playAgain=window.nextLine();
 							}
 						}	
 					}compPlayers=false;
@@ -352,10 +364,15 @@ public class TwentyOneSticks
 							{
 								playing = true;
 								numSticks=21;
-							}
+							}else{
+								window.println("Invalid input. Please try again.");
+								playAgain=window.nextLine();}
 							if(playAgain.equalsIgnoreCase("N")||playAgain.equals("n"))
 							{
 								window.println("Thanks for playing...Cry baby!");
+							}else{
+								window.println("Invalid input. Please try again.");
+								playAgain=window.nextLine();
 							}
 						}	
 					}compPlayers=false;
